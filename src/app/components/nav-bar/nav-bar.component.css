@@ -114,11 +114,22 @@ nav
     color: #F7F7F7;
     font-size: 18px;
     font-family: Bai_Jamjuree;
+    border: none;
+    border-bottom: 2px solid #2b2b3b;
+    padding-bottom: 10px;
     transition: 400ms ease-in-out;
 }
 .anchor_list li a:hover 
 {
     color: #36AE7C;
+    border-bottom: 2px solid #36AE7C;
+    padding-bottom: 2px;
+}
+#active_tab 
+{
+    color: #36AE7C;
+    border-bottom: 2px solid #36AE7C;
+    padding-bottom: 2px;
 }
 
 .new_stuff_droped 

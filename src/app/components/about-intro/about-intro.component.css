@@ -1,0 +1,26 @@
+.intro_back 
+{
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('../../../assets/image/components/who.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 100px;
+}
+p 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}

@@ -10,6 +10,10 @@ import { BlogsComponent } from './pages/blogs/blogs.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { StorePageComponent } from './pages/store-page/store-page.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ContactIntroComponent } from './components/contact-intro/contact-intro.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { AboutIntroComponent } from './components/about-intro/about-intro.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ModalComponent } from './components/modal/modal.component';
     BlogsComponent,
     HomePageComponent,
     StorePageComponent,
-    ModalComponent
+    ModalComponent,
+    ContactIntroComponent,
+    ContactPageComponent,
+    AboutUsComponent,
+    AboutIntroComponent
   ],
   imports: [
     BrowserModule,

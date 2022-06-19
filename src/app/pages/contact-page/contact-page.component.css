@@ -1,0 +1,78 @@
+.header_wrapper 
+{
+    text-align: center;
+    padding: 50px;
+}
+.header_wrapper h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    padding: 10px;
+    border-bottom: 2px solid #36AE7C;
+    width: 200px;
+    margin: 0 auto;
+}
+.form_one 
+{
+    height: 550px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form_one input
+{
+    display: block;
+    margin: 50px auto;
+    width: 400px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #b4b2b2;
+    color: #36AE7C;
+    font-family: Bai_Jamjuree;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+}
+.form_one textarea 
+{
+    width: 700px;
+    max-width: 700px;
+    min-width: 600px;
+    margin: 0 auto; 
+    max-height: 150px;
+    min-height: 100px;
+    background: none;
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    border: 2px solid #36AE7C;
+    padding: 20px;
+    outline: none;
+}
+.send_message_button_wrapper 
+{
+    padding: 30px;
+}
+.send_message_button_wrapper button 
+{
+    width: 200px;
+    padding: 20px;
+    font-family: Bai_Jamjuree;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #36AE7C;
+    border: 2px solid #36AE7C;
+    border-radius: 1px;
+    color: #F7F7F7;
+    box-shadow: #36ae7c3a 0px 19px 38px, #36ae7c2f 0px 15px 12px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.send_message_button_wrapper button:hover 
+{
+    background: #2b2b3b;
+    color: #F7F7F7;
+    border-color: #2b2b3b;
+    color: #36AE7C;box-shadow: #36AE7C 0px 1px 2px 0px,
+    #36AE7C 0px 2px 6px 2px;
+}

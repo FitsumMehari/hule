@@ -43,6 +43,13 @@
     border-left: 3px solid #36AE7C;
     padding-left: 10px;
 }
+.cate_list li .active_size_tab
+{
+    color: #36AE7C;
+    font-weight: bold;
+    border-left: 3px solid #36AE7C;
+    padding-left: 10px;
+}
 
 .item_search_bar 
 {

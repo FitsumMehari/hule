@@ -1,7 +1,7 @@
 <div class="main_modal">
     <div class="modal_card">
         <div class="close_this_shit">
-            <span>+</span>
+            <span routerLink="/store">+</span>
         </div>
         <div class="main_description">
             <div class="modal_graphics">
@@ -12,10 +12,10 @@
 
                 </div>
                 <div class="detail_name">
-                    <h1>Full Azebeza</h1>
+                    <h1>Russian Vodka</h1>
                 </div>
                 <div class="detail_price_point">
-                    <h2>$1,299 <span class="prev_price">$1,750</span> </h2>
+                    <h2>$129.50 <span class="prev_price">$750</span> </h2>
                 </div>
                 <div class="detail_product_amount">
                     <li><span (click)="I_hadToomuch()"class="loose_item" >-</span> <span class="value_cout">{{number_of_product}}</span>  <span (click)="I_takAnotherOne()" class="add_item">+</span></li>
@@ -47,3 +47,4 @@
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

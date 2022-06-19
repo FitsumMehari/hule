@@ -12,13 +12,13 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+
   /// This Proccess is really over kill until i find abetter way to do it it will do for NOW!
 
   // The logic here is
-  // Each nav like wiil have hard coded id start from 1 - n
+  // Each nav like wiil have hard coded id start from 0 - n
   // in this case we have 6 item
-  // We set the first flag to true becouse the user land for the first time ar home page
+  // We set the first flag to true becouse the user land for the first time in home page
   // and hard coded the index for each TAB(link) so the home page tab will have index 0 as u can see here
   private mTabFlag: boolean[] = [true, false, false, false, false, false];
   setActiveTab(nav_item_id: number): void 
@@ -46,7 +46,7 @@ export class NavBarComponent implements OnInit {
     }
     // This function should not reach here but if it did
     // we return false 
-    // we don't want every like look like activated
+    // we don't want every link look like activated
     return false;
   }
  

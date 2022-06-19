@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { StorePageComponent } from './pages/store-page/store-page.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     IntroBackComponent,
     FooterComponent,
     BlogsComponent,
-    HomePageComponent
+    HomePageComponent,
+    StorePageComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,8 @@ import { ContactIntroComponent } from './components/contact-intro/contact-intro.
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AboutIntroComponent } from './components/about-intro/about-intro.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CartIntroComponent } from './components/cart-intro/cart-intro.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AboutIntroComponent } from './components/about-intro/about-intro.compon
     ContactIntroComponent,
     ContactPageComponent,
     AboutUsComponent,
-    AboutIntroComponent
+    AboutIntroComponent,
+    CartPageComponent,
+    CartIntroComponent
   ],
   imports: [
     BrowserModule,

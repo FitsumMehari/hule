@@ -7,6 +7,7 @@ import { StorePageComponent } from './pages/store-page/store-page.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 const routes: Routes = [
   { path: 'blog', component: BlogsComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path:  'store', component: StorePageComponent},
   { path: 'modal', component: ModalComponent },
   { path: 'contact-us', component: ContactPageComponent},
-  {path: 'about-us', component: AboutUsComponent }
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'cart', component: CartPageComponent }
 ];
 
 @NgModule({

@@ -23,7 +23,7 @@
     background: #2b2b3b;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     width: 300px;
-    border-radius: 30px;
+    border-radius: 6px;
     text-align: center;
     height: 350px;
     transition: 500ms ease-in-out;
@@ -53,7 +53,7 @@
 {
     font-size: 90px;
     padding: 30px;
-    color: #F7F7F7;
+    color: #36AE7C;
 }
 .card_content li 
 {

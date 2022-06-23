@@ -1,0 +1,99 @@
+.log_wrapper 
+{
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+}
+.main_wrapper 
+{
+    padding: 50px;
+    display: flex;
+    justify-content: right;
+    background-image: linear-gradient(#15151ef3, #15151ef3), url('../../../assets/image/components/log.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.log_header 
+{
+    padding: 30px;
+    color: #F7F7F7;
+    text-align: center;
+    margin-right: 150px;
+    font-family: Bai_Jamjuree;
+}
+.log_header h1 
+{
+    
+}
+.main_form 
+{
+    text-align: right;
+}
+.main_form input 
+{
+    display: block;
+    padding: 10px;
+    height: 30px;
+    margin: 20px;
+    width: 400px;
+    background: none;
+    border: 2px solid #36AE7C;
+    outline: none;
+    color: #36AE7C;
+    font-family: Bai_Jamjuree;
+    font-size: 16px;
+    font-weight: bold;
+}
+.log_submit_pass 
+{
+    padding: 30px;   
+}
+.log_submit_pass button 
+{
+    width: 200px;
+    padding: 20px;
+    font-family: Bai_Jamjuree;
+    color: #F7F7F7;
+    font-size: 18px;
+    background: #36AE7C;
+    border: 3px solid #36AE7C;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+}
+.log_submit_pass button:hover 
+{
+    background: none;
+    font-weight: bold;
+    box-shadow: #36AE7C 0px 5px 15px;
+}
+.add_info 
+{
+    text-align: center;
+    padding-bottom: 35px;
+    width: 190px;
+    margin-left: auto;
+    margin-right: 30px;
+    border-bottom: 2px solid #15151e;
+    transition: 300ms ease-in-out;
+}
+.add_info:hover 
+{
+    padding-bottom: 15px;
+    border-bottom: 2px solid #36AE7C;
+}
+.add_info a 
+{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #929191;
+    font-family: Bai_Jamjuree;
+    transition: 300ms ease-in-out;
+}
+.add_info a:hover 
+{
+    color: #36AE7C;
+}

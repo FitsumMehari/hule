@@ -16,6 +16,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AboutIntroComponent } from './components/about-intro/about-intro.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { CartIntroComponent } from './components/cart-intro/cart-intro.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CartIntroComponent } from './components/cart-intro/cart-intro.component
     AboutUsComponent,
     AboutIntroComponent,
     CartPageComponent,
-    CartIntroComponent
+    CartIntroComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

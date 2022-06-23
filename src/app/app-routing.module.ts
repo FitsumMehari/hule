@@ -8,6 +8,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   { path: 'blog', component: BlogsComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'modal', component: ModalComponent },
   { path: 'contact-us', component: ContactPageComponent},
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'cart', component: CartPageComponent }
+  { path: 'cart', component: CartPageComponent },
+  { path: 'login', component: LoginPageComponent }
 ];
 
 @NgModule({

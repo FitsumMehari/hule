@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Bai_Jamjuree;
+    src: url('../../../assets/font/Bai_Jamjuree/BaiJamjuree-Regular.ttf');
+}
+.foot_wrapper 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #2b2b3b;
+    border-bottom: 5px solid #36AE7C;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.categ_list li, .help_center li
+{
+    list-style: none;
+    padding: 5px;
+    padding-left: 50px;
+}
+.categ_list li a, .help_center li a
+{
+    text-decoration: none;
+    color: #b8b8b8;
+    font-family: Bai_Jamjuree;
+    transition: 300ms ease-in-out;
+}
+.categ_list li a:hover, .help_center li a:hover
+{
+    color: #F7F7F7;
+}
+
+.get_in_touch p 
+{
+    color: #b8b8b8;
+    font-family: Bai_Jamjuree;
+    transition: 300ms ease-in-out;
+}
+.get_in_touch p:hover 
+{
+    color: #F7F7F7;
+}
+.get_in_touch li  
+{
+    list-style: none;
+}
+.connect_method 
+{
+    display: flex;
+}
+.connect_method li  i 
+{
+    padding: 20px 15px 0px 0px;
+    color: #b8b8b8;
+    font-size: 18px;
+    transition: 300ms;
+}
+.connect_method li  i:hover 
+{
+    color: #36AE7C;
+}
+.copy_right_stuff 
+{
+    padding: 30px;
+}
+.copy_right_stuff  p 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    text-align: center;
+}

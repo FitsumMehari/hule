@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+* 
+{
+    margin: 0;
+    padding: 0; 
+    /* temp color */
+}
+@font-face {
+    font-family: Bai_Jamjuree;
+    src: url('./assets/font/Bai_Jamjuree/BaiJamjuree-Regular.ttf');
+}
+body 
+{
+     /*use somekind of var to toggel b/n dark and light */
+     background-color: #15151e;
+}

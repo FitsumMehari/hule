@@ -1,0 +1,107 @@
+h1 
+{
+    font-size: 30px;
+    font-family: Bai_Jamjuree;
+    color: #36AE7C;
+    text-align: center;
+    padding: 50px;
+}
+h2 
+{
+    font-size: 50px;
+    font-family: Bai_Jamjuree;
+    color: #F7F7F7;
+    text-align: center;
+    padding: 0px 0px 20px 20px;
+    border-bottom: 3px solid #36AE7C;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blogs_list_wrapper 
+{
+    padding: 100px;
+    display: inline-flex;
+    row-gap: 70px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.single_blog_card 
+{
+    border: 3px solid #2b2b3b;
+    border-radius: 15px;
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    background: #2b2b3b;
+    box-shadow: #36AE7C 1.95px 1.95px 2.6px;
+    transition: 500ms;
+}
+.single_blog_card:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.single_blog_card:hover p 
+{
+    transform: scale(1.1);
+    color: #DFDFDE;
+}
+.blog_graphics 
+{
+    background-image: url('../../../assets/image/components/default_blog_for_now.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+.blog_title h3 
+{
+    text-align: center;
+    color: #F7F7F7;
+    font-size: 20px;
+    font-family: Bai_Jamjuree;
+    padding: 20px;
+    border-bottom: 2px solid #36AE7C;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog_snippest p
+{
+    color: #F7F7F7;
+    font-size: 14px;
+    font-family: Bai_Jamjuree;
+    text-align: left;
+    padding: 10px;
+    transition: 500ms ease-in-out;
+} 
+.blog_read_more_button 
+{
+    padding: 20px;
+}
+.blog_read_more_button button 
+ {
+    width: 80px;
+    height: 30px;
+    background: none;
+    font-family: Bai_Jamjuree;
+    color: #36AE7C;
+    font-weight: bold;
+    border: none;
+    border-bottom: 3px solid #2b2b3b;
+    padding-bottom: 50px;
+    cursor: pointer;
+    transition: 500ms;
+ }
+ .blog_read_more_button button:hover 
+ {
+    border-bottom: 3px solid #36AE7C;
+    padding-bottom: 20px;
+ }
+ .bloger_rele_date 
+ {
+    padding: 10px;
+    font-family: Bai_Jamjuree;
+    color: #4b685c;
+    text-align: center;
+    font-size: 12px;
+ }

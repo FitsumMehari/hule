@@ -1,0 +1,169 @@
+.cart_header 
+{
+    padding: 50px;
+
+}
+.cart_header h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px solid #36AE7C;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.cart_wrapper 
+{
+    height: auto;
+
+}
+.cart_wrapper 
+{
+    border-bottom: 3px solid #36AE7C;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart_wrapper li 
+{
+    list-style: none;
+}
+.product_wrapper 
+{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    padding-right: 10px;
+    border-right: 2px solid #2b2b3b85;
+}
+.product_graphics 
+{
+    padding: 10px;
+}
+.product_graphics img 
+{
+    width: 100px;
+    height: auto;
+}
+.product_name .pname 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    padding: 10px;
+}
+.product_name .pinclueds 
+{
+    color: #888888;
+    font-family: Bai_Jamjuree;
+    font-size: 15px;
+    padding: 10px;
+}
+.product_name .shipping_date 
+{
+    color: #36AE7C;
+    font-family: Bai_Jamjuree;
+    font-size: 15px;
+    padding: 10px;
+}
+.product_price 
+{
+    text-align: center;
+    width: 200px;
+    padding-right: 25px;
+    border-right: 2px solid #2b2b3b85;
+}
+.product_price li 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 50px;
+}
+.product_quantity 
+{
+    width: 200px;
+    text-align: center;
+    padding-right: 20px;
+    border-right: 2px solid #2b2b3b85;
+}
+.product_quantity li 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    text-align: left;
+    margin-top: 50px;
+}
+.product_quantity li span 
+{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bolder;
+}
+.total_product_proce 
+{
+    width: 200px;
+}
+.total_product_proce li 
+{
+     color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 50px;
+} 
+.product_quantity .add_pro, .product_quantity .loose_pro  
+{
+    transition: 300ms ease-in-out;
+}
+.product_quantity .add_pro:hover, .product_quantity .loose_pro:hover 
+{
+    color: #36AE7C;
+    cursor: pointer;
+}
+.finailize_wrapper 
+{
+    padding: 50px;
+    text-align: right;
+}
+.product_sub_total 
+{
+    padding-right: 40px;
+}
+.product_sub_total li 
+{
+    list-style: none;
+    color: #4f5fee;
+    font-weight: bold;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+}
+.product_checkout 
+{
+    padding: 20px;
+}
+.product_checkout button 
+{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #36AE7C;
+    background: #36AE7C;
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 300ms ease-in-out;
+}
+.product_checkout button:hover 
+{
+    border: 1px solid #4f5fee;
+    background: #4f5fee;
+}

@@ -1,0 +1,65 @@
+.body_wrapper h1 
+{
+    color: #F7F7F7;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #F7F7F7;
+    font-family: Bai_Jamjuree;
+    width: 250px;
+}
+.card_wrapper 
+{
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.card 
+{
+    padding: 20px;
+    border: 2px solid #2b2b3b;
+    background: #2b2b3b;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 300px;
+    border-radius: 6px;
+    text-align: center;
+    height: 350px;
+    transition: 500ms ease-in-out;
+}
+.card h2 
+{
+    padding: 20px;
+    color: #F7F7F7;
+    border-bottom: 2px solid #15151e;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Bai_Jamjuree;
+    transition: 500ms ease-in-out;
+}
+.card:hover 
+{
+    box-shadow: #36ae7c9a 0px 3px 6px, #36ae7c9a 0px 3px 6px;
+}
+.card:hover h2 
+{
+    color: #36AE7C;
+    border-color: #36AE7C;
+}
+.card_icon i 
+{
+    font-size: 90px;
+    padding: 30px;
+    color: #36AE7C;
+}
+.card_content li 
+{
+    text-align: left;
+    color: #F7F7F7;
+    list-style: none;
+    padding: 0px 10px 3px 30px;
+    font-family: Bai_Jamjuree;
+}

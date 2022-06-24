@@ -1,0 +1,62 @@
+.about_us_wrapper 
+{
+    width: 80%;
+    padding: 40px;
+    margin: 0 auto;
+}
+.main_body_header 
+{
+    padding: 40px;
+}
+.main_body_header h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    padding: 20px;
+    border-bottom: 2px solid #36AE7C;
+    text-align: center;
+}
+.intro_discription h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    padding: 20px;
+    border-bottom: 2px solid #36AE7C;
+    width: 400px;
+    text-align: left;
+}
+.intro_discription p 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 16px;
+    padding: 20px;
+}
+.faq_main .faq_head 
+{
+    padding: 30px;
+}
+.faq_head h2 
+{
+    text-align: center;
+    font-size: 45px;
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    border-bottom: 2px solid #36AE7C;
+    width: 100px;
+    margin: 0 auto;
+}
+.faq_body h1 
+{
+    color: #36AE7C;
+    font-family: Bai_Jamjuree;
+    font-size: 30px;
+    padding: 20px;
+}
+.faq_body p 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    padding: 20px;
+    font-size: 18px;
+}

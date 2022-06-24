@@ -1,0 +1,56 @@
+.intro_back 
+{
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../assets/image/components/landing_page_head_back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 100px;
+}
+p 
+{
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.country_name 
+{
+    font-weight: bold;
+    color: #36AE7C;
+}
+.user_need_more_info 
+{
+    width: 200px;
+    height: 40px;
+    background: none;
+    color: #36AE7C;
+    font-size: 16px;
+    font-family: Bai_Jamjuree;
+    font-weight: bold;
+    border: 2px solid #36AE7C;
+    box-shadow: #36ae7c57 0px 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+}
+.button_container {
+    padding: 50px;
+    text-align: center;
+}
+.user_need_more_info:hover 
+{
+    background: #36AE7C;
+    color: #F7F7F7;
+    border-color: #36AE7C;
+    font-weight: 100;
+}

@@ -1,28 +1,28 @@
+<app-nav-bar></app-nav-bar>
 <app-cart-intro></app-cart-intro>
-
 <div class="cart_header">
     <h1>Your Shopping Cart</h1>
 </div>
-
-<div class="cart_wrapper">
+{{ updateList() }}
+<div *ngFor="let data of ProductList; let counter = index" class="cart_wrapper">
     <div class="product_wrapper">
         <div class="product_graphics">
-            <img src="../../../assets/image/product/food/Demofood.jpg" alt="">
+            <img src="{{data.ProductImage}}"  alt="">
         </div>
         <div class="product_name">
-            <li class="pname">Special Dish</li>
-            <li class="pinclueds">Includes 1 spoon / Two Table + 1 shoe</li>
-            <li class="shipping_date">Deliverd at Jun 13-09-2014</li>
+            <li class="pname">{{data.ProductName}}</li>
+            <li class="pinclueds">Includes:  {{data.ProductInclude}}</li>
+            <li class="shipping_date">Dalivery Date:  {{data.ProductDeliveryData}}</li>
         </div>
     </div>
     <div class="product_price">
-        <li>${{ getSinglePrice() }}</li>
+        <li>${{ data.ProductSinglePrice }}</li>
     </div>
     <div class="product_quantity">
-        <li><span (click)="looseProduct()" class="loose_pro"> - </span> {{geProductCount()}} <span (click)="addProduct()" class="add_pro"> + </span></li>
+        <li><span (click)="looseProduct(counter)" class="loose_pro"> - </span> {{data.ProductQuantity}} <span (click)="addProduct(counter)" class="add_pro"> + </span></li>
     </div>
     <div class="total_product_proce">
-        <li>${{ getTotalPrice() }}</li>
+        <li>${{ data.ProductTotalPrice }}</li>
     </div>
 </div>
 
@@ -38,3 +38,4 @@
         <button>Check Out</button>
     </div>
 </div>
+<app-footer></app-footer>

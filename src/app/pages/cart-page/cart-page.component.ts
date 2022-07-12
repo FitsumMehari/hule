@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FillCartService } from 'src/app/fill-cart.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -6,18 +7,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-page.component.css']
 })
 export class CartPageComponent implements OnInit {
-  constructor() { }
 
-  ngOnInit(): void {
+  public ProductList: Array<any> = [ ]
+  private SubTotalPrice: any;
+  constructor(public _Cart: FillCartService) {
+   }
+
+  ngOnInit(): void 
+  {
+    this.ProductList = this._Cart.ProductList;
+    this.SubTotalPrice = this._Cart.SubTotal;
+  }
+
+
+
+  updateList() 
+  {
+    
+      
   }
   
-  addProduct():void { this.productCount++; }
-  looseProduct() : void { if(this.productCount >= 2) this.productCount--; }
-  geProductCount() : number { return this.productCount; };
-  getTotalPrice() : number { return this.productCount * this.singlePrice; }
-  getSinglePrice() : number { return this.singlePrice; }
+  addProduct(productIndex: number):void 
+  { 
+      this._Cart.reCalaculateValue(productIndex, 1);
+  }
+  looseProduct(productIndex: number) : void 
+  {
+    if(this._Cart.ProductList[productIndex].ProductQuantity > 1)
+        this._Cart.reCalaculateValue(productIndex, -1);
+  }
+  getTotalPrice() : string 
+  { 
+    this.SubTotalPrice = this._Cart.SubTotal
+    return this.SubTotalPrice.toFixed(2); 
+  }
   
-  
-  private productCount: number = 1;
-  private singlePrice : number = 86.56;
+   
+  // TempStorage before pushing
+  public __ProductImage: string = " ";
+  public __Productname: string = " ";
+  public __ProductSinglePrice: number = 0;
+  public __ProductQuantity: number = 0;
+
+ 
+
 }

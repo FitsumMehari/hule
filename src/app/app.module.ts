@@ -17,6 +17,11 @@ import { AboutIntroComponent } from './components/about-intro/about-intro.compon
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { CartIntroComponent } from './components/cart-intro/cart-intro.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { BackLogComponent } from './pages/back-log/back-log.component';
+import { StoreItemInteractionService } from './store-item-interaction.service';
+import { FillCartService } from './fill-cart.service';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,13 +39,16 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     AboutIntroComponent,
     CartPageComponent,
     CartIntroComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    BackLogComponent,
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [FillCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

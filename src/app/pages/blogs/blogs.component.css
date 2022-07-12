@@ -28,12 +28,12 @@ h2
 }
 .single_blog_card 
 {
-    border: 3px solid #2b2b3b;
+    border: 3px solid #363b41;
     border-radius: 15px;
     width: 400px;
     height: 600px;
     padding: 30px;
-    background: #2b2b3b;
+    background: #363b41;
     box-shadow: #36AE7C 1.95px 1.95px 2.6px;
     transition: 500ms;
 }
@@ -87,7 +87,7 @@ h2
     color: #36AE7C;
     font-weight: bold;
     border: none;
-    border-bottom: 3px solid #2b2b3b;
+    border-bottom: 3px solid #363b41;
     padding-bottom: 50px;
     cursor: pointer;
     transition: 500ms;

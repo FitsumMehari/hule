@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FillCartService } from 'src/app/fill-cart.service';
 
 
 
@@ -9,11 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
   
-  constructor() {
-
+  constructor(private _Cart: FillCartService) {
    }
   
   ngOnInit(): void {
+    this.CardCount = this._Cart.TotalCartItem;
   }
   
 
@@ -25,6 +26,11 @@ export class NavBarComponent implements OnInit {
   // We set the first flag to true becouse the user land for the first time in home page
   // and hard coded the index for each TAB(link) so the home page tab will have index 0 as u can see here
   private mTabFlag: boolean[] = [true, false, false, false, false, false];
+  getCartItemCount() : number 
+  {
+    this.CardCount = this._Cart.TotalCartItem;
+    return this.CardCount;
+  }
   setActiveTab(nav_item_id: number): void 
   {
     // Here we are assign value 
@@ -53,5 +59,7 @@ export class NavBarComponent implements OnInit {
     // we don't want every link look like activated
     return false;
   }
+
+  private CardCount: number = 0;
  
 }

@@ -70,9 +70,9 @@
 }
 .send_message_button_wrapper button:hover 
 {
-    background: #2b2b3b;
+    background: #363b41;
     color: #F7F7F7;
-    border-color: #2b2b3b;
+    border-color: #363b41;
     color: #36AE7C;box-shadow: #36AE7C 0px 1px 2px 0px,
     #36AE7C 0px 2px 6px 2px;
 }

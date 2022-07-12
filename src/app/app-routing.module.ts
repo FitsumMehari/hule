@@ -9,8 +9,10 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 const routes: Routes = [
+  { path: '', component: LoginPageComponent },
   { path: 'blog', component: BlogsComponent },
   { path: 'home', component: HomePageComponent },
   { path:  'store', component: StorePageComponent},
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactPageComponent},
   { path: 'about-us', component: AboutUsComponent },
   { path: 'cart', component: CartPageComponent },
-  { path: 'login', component: LoginPageComponent }
+  { path: 'login', component: LoginPageComponent },
+  {path: 'signup', component: SignupPageComponent }
 ];
 
 @NgModule({

@@ -10,7 +10,7 @@
         <!-- if loged in by user name -->
         <div class="user_info_cart">
             <li><a routerLink="/login">My Account</a></li>
-            <li><a routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i><sub class="cart_item_count">1</sub></a></li>
+            <li><a routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i><sub class="cart_item_count">{{ getCartItemCount() }}</sub></a></li>
         </div>
     </div>
 <nav>
@@ -20,7 +20,7 @@
                 <li><a  routerLink="/home" (click)="setActiveTab(0)" id="{{getActiveTabValue(0) ? 'active_tab' : ''}}" >Home</a></li>
                 <!-- new_stuff_droped will be actiavted when new stuff added to the store -->
                 <li><a (click)="setActiveTab(1)" id="{{getActiveTabValue(1) ? 'active_tab' : ''}}" routerLink="/store">Store </a> <sup class="new_stuff_droped">HOT</sup> </li>
-                <li><a (click)="setActiveTab(2)" id="{{getActiveTabValue(2) ? 'active_tab' : ''}}" routerLink="#features">Features</a></li>
+                <!-- <li><a (click)="setActiveTab(2)" id="{{getActiveTabValue(2) ? 'active_tab' : ''}}" routerLink="#features">Features</a></li> -->
                 <li><a (click)="setActiveTab(3)" id="{{getActiveTabValue(3) ? 'active_tab' : ''}}" routerLink="/blog">Blog</a></li>
                 <li><a (click)="setActiveTab(5)" id="{{getActiveTabValue(5) ? 'active_tab' : ''}}" routerLink="/contact-us">Contact</a></li>
                 <li><a (click)="setActiveTab(4)" id="{{getActiveTabValue(4) ? 'active_tab' : ''}}" routerLink="/about-us">About</a></li>

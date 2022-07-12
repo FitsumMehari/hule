@@ -1,21 +1,24 @@
-<div class="main_wrapper">
-    <div class="log_wrapper">
-        <div class="log_header">
-            <h1>Just You'r Info Only</h1>
-        </div>
-        <form action="#" class="main_form">
-            <div class="input_wrapper">
-                <input type="email" name="email_user" id="user_email_input" placeholder="This will be you'r Email" required autocomplete="off">
-                <input type="password" name="user_password" id="user_pass_input" placeholder="***************" required autocomplete="off">
-    
+<div class="master_login_Page_wrapper">
+    <div class="form_wrapper">
+        <form class="fm" method="post">
+            <div class="user_name_wrapper">
+                <span class="icons"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Username">
             </div>
-            <div class="log_submit_pass">
-                <button type="submit">Let Me In</button>
+            <div class="user_password_wrapper">
+                <span class="icons"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="user_key" id="user_key" autocomplete="off" placeholder="Password">
+            </div>
+            <div class="button_wrapper">
+                <button type="submit">Sign in</button>
+            </div>
+            <div class="prep_for_signup">
+                <span class="info">Not a member? </span><a routerLink="/signup">Sign up now</a>
+                
+                <br><br>
+                <a  class="info" routerLink="/home">I'm here for the demo!</a>
+                
             </div>
         </form>
-    
-        <div class="add_info">
-            <a href="#">What is the meaning of this?</a>
-        </div>
     </div>
 </div>

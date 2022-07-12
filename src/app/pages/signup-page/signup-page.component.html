@@ -1,0 +1,58 @@
+<div class="main_signuup_wrapper">
+
+    <div class="intro_new_user">
+        <h1> <span class="bold_this">Gift</span> Shop<span class="bold_this">.</span></h1>
+    </div>
+
+    <div class="sign_up_break_the_ice">
+        <div class="content_wrapper {{stages[0] ? 'show_cont' : ''}}">
+            <div class="give_hand">
+                <i class="fa-solid fa-hand"></i>
+            </div>
+            <div class="introduce_your_selfe">
+                <h1>Hi there!</h1><br>
+                <h1>Welcome to the Gift Shop family</h1>
+                <p>Remember your are now family! Don't be shy, This is your home.</p>
+            </div>
+        </div>
+        <div class="content_user_name {{stages[1] ? 'show_cont' : ''}}">
+            <h2>What's your name?</h2>
+            <p class="note">At the end of the day we need to know our customers!</p>
+            <input type="text" name="user_first_name" id="user_first_name" autocomplete="off" placeholder="First Name" required>
+            <input type="text" name="user_father_name" id="user_father_name" autocomplete="off" placeholder="Father Name" required>
+            <input type="text" name="user_last_name" id="user_last_name" autocomplete="off" placeholder="Last Name" required>
+        </div>
+        <div class="content_phone_number {{stages[2] ? 'show_cont' : ''}}">
+            <h2>What is your phone number?</h2>
+            <p class="note">We never call just for text confirmation!</p>
+           <input type="number" name="user_phone_number" id="phone_number" autocomplete="off" placeholder="Phone Number" required>
+        </div>
+        <div class="content_email {{stages[3] ? 'show_cont' : ''}}">
+            <h2>What is you email address?</h2>
+            <p class="note">This is what you'll use to sign in</p>
+            <input type="email" name="user_email" id="user_email" autocomplete="off" placeholder="E-mail" required>
+        </div>
+        <div class="content_password {{stages[4] ? 'show_cont' : ''}}">
+            <h2>Create a passwrod</h2>
+            <p class="note">Make your passwrod strong!</p>
+            <input type="password" [(ngModel)]="UserPasswordOne" (keyup)="validate(UserPasswordOne)" name="user_key" id="user_key" autocomplete="off" placeholder="Password" required>
+            <input type="password" [(ngModel)]="UserPasswordTwo" (keyup)="validatePassword(UserPasswordOne, UserPasswordTwo)" name="user_key_conf" id="user_key_conf" autocomplete="off" placeholder="Password confirmation" required>
+
+            <div class="pass_check">
+                <li class="{{strength_level[0] ? 'check_mark_good' : 'check_mark_bad'}}">Uppercase <span class="check_mark"><i class="fa-solid {{strength_level[0] ? Icon_type_good : Icon_type_bad}}"></i></span> </li>
+                <li class="{{strength_level[1] ? 'check_mark_good' : 'check_mark_bad'}}">Lowercase <span class="check_mark"><i class="fa-solid {{strength_level[1] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+                <li class="{{strength_level[2] ? 'check_mark_good' : 'check_mark_bad'}}">Number <span class="check_mark"><i class="fa-solid {{strength_level[2] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+                <li class="{{strength_level[3] ? 'check_mark_good' : 'check_mark_bad'}}">Password Match <span class="check_mark"><i class="fa-solid {{strength_level[3] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+            </div>
+
+            <div class="terms">
+                 <p><input class="spec" type="checkbox" name="_term" id="_term"> By signing up, I agree to GiftShop <a class="impo" href="#">Terms and Conditions</a> , <a class="impo" href="#">Privacy Policy</a> and <a class="impo" href="#">Terms of Use.</a> </p>
+            </div>
+       
+        </div>
+        <div class="enough_this_shit">
+            <!-- <a  (click)="prepNext()" routerLink="{{__to__}}">{{stages[4] ? 'Sign Up' : 'Next'}}</a> -->
+            <button type="submit" (click)="prepNext()" routerLink="{{__to__}}" >{{stages[4] ? 'Sign Up' : 'Next'}}</button>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="master_shop_list_wrapper">
     <div class="side_menu_to_choose_cate">
         <div class="side_menu_header_wrapper">
@@ -7,38 +8,44 @@
             <input type="text" id="search_input" name="seached_item_name" placeholder="Filter by name" required="on">
         </div>
         <div class="cate_list">
-            <li><a (click)="setActiveTab(0)" class="{{mActiveSideBar[0] ? 'active_size_tab' : ''}}" routerLink="/store">All</a></li>
-            <li><a (click)="setActiveTab(1)" class="{{mActiveSideBar[1] ? 'active_size_tab' : ''}}" routerLink="/store">Liqour</a></li>
-            <li><a (click)="setActiveTab(2)" class="{{mActiveSideBar[2] ? 'active_size_tab' : ''}}" routerLink="/store">Spices</a></li>
-            <li><a (click)="setActiveTab(3)" class="{{mActiveSideBar[3] ? 'active_size_tab' : ''}}" routerLink="/store">Fast Food</a></li>
-            <li><a (click)="setActiveTab(4)" class="{{mActiveSideBar[4] ? 'active_size_tab' : ''}}" routerLink="/store">Detergent</a></li>
-            <li><a (click)="setActiveTab(5)" class="{{mActiveSideBar[5] ? 'active_size_tab' : ''}}" routerLink="/store">Holiday Spacial</a></li>
-            <li><a (click)="setActiveTab(6)" class="{{mActiveSideBar[6] ? 'active_size_tab' : ''}}" routerLink="/store">Asbeza Package</a></li>
+            <li><a (click)="setActiveTab(0)" (click)="setFilterValue('All')" class="{{mActiveSideBar[0] ? 'active_size_tab' : ''}}" routerLink="/store">All</a></li>
+            <li><a (click)="setActiveTab(1)" (click)="setFilterValue('Liqour')" class="{{mActiveSideBar[1] ? 'active_size_tab' : ''}}" routerLink="/store">Liqour</a></li>
+            <li><a (click)="setActiveTab(2)" (click)="setFilterValue('Spices')" class="{{mActiveSideBar[2] ? 'active_size_tab' : ''}}" routerLink="/store">Spices</a></li>
+            <li><a (click)="setActiveTab(3)" (click)="setFilterValue('Fast Food')" class="{{mActiveSideBar[3] ? 'active_size_tab' : ''}}" routerLink="/store">Fast Food</a></li>
+            <li><a (click)="setActiveTab(4)" (click)="setFilterValue('Detergent')" class="{{mActiveSideBar[4] ? 'active_size_tab' : ''}}" routerLink="/store">Detergent</a></li>
+            <li><a (click)="setActiveTab(5)" (click)="setFilterValue('Holiday Spacial')" class="{{mActiveSideBar[5] ? 'active_size_tab' : ''}}" routerLink="/store">Holiday Spacial</a></li>
+            <li><a (click)="setActiveTab(6)" (click)="setFilterValue('Asbeza Package')" class="{{mActiveSideBar[6] ? 'active_size_tab' : ''}}" routerLink="/store">Asbeza Package</a></li>
         </div>
     </div>
     <div class="item_list_wrapper">
-        <div class="single_product_detail">
-            <div class="new_flag_wrapper">
-                <span class="new_flag">This guy is NEW!</span>
-            </div>
-            <div class="product_grpahics">
-                <img src="../../../assets/image/product/liqour/ban-russian-vodka.png" width="200px" height="150px" alt="??">
-            </div>
-            <div class="product_name">
-                <h2>Russian Vodka</h2>
-            </div>
-            <div class="product_price_tag">
-                <li>$129.50</li>
-            </div>
-
-            <div class="interactive_addtocard_button_parent">
-                <button routerLink="/modal">Add To Cart</button> 
-            </div>
-            <div class="show_modal">
-                <!-- Find a way to Show this modal when the user click add to cart and send the current information to this modal -->
-                <!-- <app-modal></app-modal> -->
+        <div *ngFor="let i of Products; let objectCount = index;">
+            <div  *ngIf="i.ItemCatagories == filterValue || (filterValue == 'All')" class="single_product_detail">
+                <div class="product_grpahics">
+                    <img src="{{i.ItemImageLoc}}" width="200px" height="150px" alt="??">
+                    <div *ngIf="i.isYoungBlood" class="new_flag_wrapper">
+                        <span class="new_item_flag">New</span>
+                    </div>
+                </div>
+                <div class="product_name">
+                    <h2>{{i.ItemName}}</h2>
+                </div>
+                <div class="product_Cata">
+                    <h3>{{i.ItemCatagories}}</h3>
+                </div>
+                <div class="product_price_tag">
+                    <li>$ {{i.ItemPrice}}</li>
+                </div>
+    
+                <div class="interactive_addtocard_button_parent">
+                    <button (click)="wrapData(objectCount)">Add To Cart</button> 
+                </div>
+                <div class="show_modal">
+                    <!-- Find a way to Show this modal when the user click add to cart and send the current information to this modal -->
+                    <!-- <app-modal></app-modal> -->
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+<app-footer></app-footer>

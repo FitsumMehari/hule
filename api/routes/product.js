@@ -48,21 +48,33 @@ router.delete('/delete/:id', verifyTokenAndAdmin, async (req, res) => {
 
 //GET PRODUCT
 router.get('/get/:id', async (req, res) => {
-    try{
+    try {
         const product = await Product.findById(req.params.id);
         res.status(200).json(product);
-    } catch(error) {
+    } catch (error) {
         res.status(500).json(error);
     }
 });
 
 //GET PRODUCTS
 router.get('/getall', async (req, res) => {
-    const query = req.query.new;
-    try{
-        const products = query? await Product.find().sort({_id: -1}).limit(10) : await Product.find();
+    const queryNew = req.query.new;
+    const queryCategory = req.query.category;
+    let products;
+    try {
+        if (queryNew) {
+            products = await Product.find().sort({ createdAt: -1 }).limit(10);
+        } else if (queryCategory) {
+            products = await Product.find({
+                category: {
+                    $in: [queryCategory]
+                }
+            })
+        } else {
+            products = await Product.find();
+        }
         res.status(200).json(products);
-    } catch(error) {
+    } catch (error) {
         res.status(500).json(error);
     }
 });

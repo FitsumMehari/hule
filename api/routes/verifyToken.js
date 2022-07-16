@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const verisfyToken = (req, res, next) => {
+const verifyToken = (req, res, next) => {
     const authHeader = req.headers.token;
     if (!authHeader) {
         return res.status(401).json("You are not authenticated!")
@@ -18,7 +18,7 @@ const verisfyToken = (req, res, next) => {
 }
 
 const verifyTokenAndAuthorization = (req, res, next) => {
-    verisfyToken(req, res, () => {
+    verifyToken(req, res, () => {
         if (req.user.id === req.params.id || req.user.isAdmin) {
             next();
         } else {
@@ -28,7 +28,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
 }
 
 const verifyTokenAndAdmin = (req, res, next) => {
-    verisfyToken(req, res, () => {
+    verifyToken(req, res, () => {
         if (req.user.isAdmin) {
             next();
         } else {
@@ -36,4 +36,4 @@ const verifyTokenAndAdmin = (req, res, next) => {
         }
     })
 }
-module.exports = { verisfyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin };
+module.exports = { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin };

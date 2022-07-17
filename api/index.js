@@ -35,6 +35,15 @@ app.use('/api/cart', cartRoute);
 app.use('/api/blog', blogRoute);
 app.use('/api/order', orderRoute);
 
+app.use((req, res, next) => {
+    res.status(404).send("Sorry can't find that!");
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+})
+
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server running on port: ${process.env.PORT || 3000}`);

@@ -24,6 +24,14 @@ app.use(express.json());
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 
+
+app.get("/testRout", (req, res) => {
+    res.json({
+        "statusCode": 200,
+        "statusMessage": "THIS IS TEST RESPONSE!"
+    })
+})
+
 app.listen(process.env.PORT || 5000, () => {
     console.log(`Backend server is running at port ${process.env.PORT || 5000} .`);
 })

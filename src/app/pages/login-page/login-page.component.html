@@ -1,13 +1,13 @@
 <div class="master_login_Page_wrapper">
     <div class="form_wrapper">
-        <form class="fm" method="post">
+        <form #data="ngForm" class="fm" (ngSubmit)="onSubmit(data)"  method="post">
             <div class="user_name_wrapper">
                 <span class="icons"><i class="fa-solid fa-user"></i></span>
-                <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Username">
+                <input class="{{isUserNameProvided ? '' : 'boxWarrning'}}" type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Username" ngModel><span class="{{isUserNameProvided ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
             </div>
             <div class="user_password_wrapper">
                 <span class="icons"><i class="fa-solid fa-lock"></i></span>
-                <input type="password" name="user_key" id="user_key" autocomplete="off" placeholder="Password">
+                <input class="{{isPasswordProvided ? '' : 'boxWarrning'}}" type="password" name="password" id="user_key" autocomplete="off" placeholder="Password" ngModel><span class="{{isPasswordProvided ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
             </div>
             <div class="button_wrapper">
                 <button type="submit">Sign in</button>

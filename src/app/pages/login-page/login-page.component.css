@@ -45,9 +45,30 @@ input:hover
 {
     background: #474d55;
 }
+.user_name_wrapper .boxWarrning, .user_password_wrapper .boxWarrning
+{
+    width: 200px;
+    padding: 15px;
+    padding-top: 16px;
+    border: none;
+    border-right: 3px solid #3b4148;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #3b4148;
+    color: #F7F7F7;
+    font-family: Bai_Jamjuree;
+    outline: none;
+    animation: boxBlink 900ms ease-in-out 900ms infinite alternate;
+    transition: 200ms ease-in-out;
+}
+@keyframes boxBlink {
+    from {border-color: #3b4148;}
+    to {border-color: #f34b64;}  
+}
 .button_wrapper 
 {
     padding: 10px;
+    text-align: left;
 }
 .button_wrapper button 
 {
@@ -91,4 +112,23 @@ input:hover
 .prep_for_signup a:hover 
 {
     text-decoration: underline;
+}
+.fillWarrning_show 
+{
+    font-size: 25px;
+    padding: 10px;
+    color: #f3558e;
+    /* opacity: 0; */
+    animation: blink 900ms ease-in-out 900ms infinite alternate;
+}
+@keyframes blink {
+    from {opacity: 0;}
+    to {opacity: 1;}  
+}
+.fillWarrning 
+{
+    font-size: 25px;
+    padding: 10px;
+    color: #f3558e;
+    opacity: 0;
 }

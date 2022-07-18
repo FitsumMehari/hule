@@ -22,6 +22,7 @@ import { StoreItemInteractionService } from './store-item-interaction.service';
 import { FillCartService } from './fill-cart.service';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [FillCartService],
   bootstrap: [AppComponent]

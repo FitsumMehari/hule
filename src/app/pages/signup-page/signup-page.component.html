@@ -1,0 +1,65 @@
+<div class="main_signuup_wrapper">
+
+    <div class="intro_new_user">
+        <h1> <span class="bold_this">Gift</span> Shop<span class="bold_this">.</span></h1>
+    </div>
+
+    <div class="sign_up_break_the_ice">
+        <div class="content_wrapper {{stages[0] ? 'show_cont' : ''}}">
+            <div class="give_hand">
+                <i class="fa-solid fa-hand"></i>
+            </div>
+            <div class="introduce_your_selfe">
+                <h1>Hi there!</h1><br>
+                <h1>Welcome to the Gift Shop family</h1>
+                <p>Remember your are now family! Don't be shy, This is your home.</p>
+            </div>
+        </div> 
+       <form #reg_data="ngForm" (ngSubmit)="onRegister(reg_data)" method="get">
+        <div class="content_user_name {{stages[1] ? 'show_cont' : ''}}">
+            <h2>What's your name?</h2>
+            <p class="note">At the end of the day we need to know our customers!</p>
+            <input class="{{isFirstNameFill ? '' : 'boxWarrning'}}" type="text" name="user_first_name" id="user_first_name" autocomplete="off" placeholder="First Name" required ngModel><span class="{{isFirstNameFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <input class="{{isFatherNameFill ? '' : 'boxWarrning'}}" type="text" name="user_father_name" id="user_father_name" autocomplete="off" placeholder="Father Name" required ngModel><span class="{{isFatherNameFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <input class="{{isLastNameFill ? '' : 'boxWarrning'}}" type="text" name="user_last_name" id="user_last_name" autocomplete="off" placeholder="Last Name" required ngModel><span class="{{isLastNameFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        </div>
+        <div class="content_phone_number {{stages[2] ? 'show_cont' : ''}}">
+            <h2>What is your phone number?</h2>
+            <p class="note">We never call just for text confirmation!</p>
+           <input class="{{isPhoneNumberFill ? '' : 'boxWarrning'}}" type="number" name="user_phone_number" id="phone_number" autocomplete="off" placeholder="Phone Number" required ngModel><span class="{{isPhoneNumberFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        </div>
+        <div class="content_email {{stages[3] ? 'show_cont' : ''}}">
+            <h2>What is you email address?</h2>
+            <p class="note">This is what you'll use to sign in</p>
+            <input class="{{isEmailFill ? '' : 'boxWarrning'}}" type="email" name="user_email" id="user_email" autocomplete="off" placeholder="E-mail" required ngModel><span class="{{isEmailFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        </div>
+        <div class="content_password {{stages[4] ? 'show_cont' : ''}}">
+            <h2>Create a passwrod</h2>
+            <p class="note">Make your passwrod strong!</p>
+            <input class="{{isPasswrodFill ? '' : 'boxWarrning'}}" type="password" [(ngModel)]="UserPasswordOne" (keyup)="validate(UserPasswordOne)" name="passwrod" id="user_key" autocomplete="off" placeholder="Password" required ngModel><span class="{{isPasswrodFill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <input class="{{isPasswrod2Fill ? '' : 'boxWarrning'}}" type="password" [(ngModel)]="UserPasswordTwo" (keyup)="validatePassword(UserPasswordOne, UserPasswordTwo)" name="passwrod2" id="user_key_conf" autocomplete="off" placeholder="Password confirmation" required ngModel><span class="{{isPasswrod2Fill ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+
+            <div class="pass_check">
+                <li class="{{strength_level[0] ? 'check_mark_good' : 'check_mark_bad'}}">Uppercase <span class="check_mark"><i class="fa-solid {{strength_level[0] ? Icon_type_good : Icon_type_bad}}"></i></span> </li>
+                <li class="{{strength_level[1] ? 'check_mark_good' : 'check_mark_bad'}}">Lowercase <span class="check_mark"><i class="fa-solid {{strength_level[1] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+                <li class="{{strength_level[2] ? 'check_mark_good' : 'check_mark_bad'}}">Number <span class="check_mark"><i class="fa-solid {{strength_level[2] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+                <li class="{{strength_level[3] ? 'check_mark_good' : 'check_mark_bad'}}">Password Match <span class="check_mark"><i class="fa-solid {{strength_level[3] ? Icon_type_good : Icon_type_bad}}"></i></span></li>
+            </div>
+
+            <div class="terms">
+                 <p><input class="spec" type="checkbox" name="agreeTermAndCondition" id="_term" ngModel> By signing up, I agree to GiftShop <a class="impo" href="#">Terms and Conditions</a> , <a class="impo" href="#">Privacy Policy</a> and <a class="impo" href="#">Terms of Use.</a> </p><span class="{{isTermCondition ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            </div>
+       
+        </div>
+        <div class="enough_this_shit">
+          <div class="config_button" *ngIf="!isLast">
+            <!-- <button (click)="prepNext()">Next</button> -->
+            <a  (click)="prepNext(reg_data)">Next</a>
+          </div>
+          <div class="sub_Button" *ngIf="isLast">
+            <button type="submit">Sign up</button>
+          </div>
+        </div>
+       </form>
+    </div>
+</div>

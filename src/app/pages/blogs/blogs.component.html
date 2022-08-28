@@ -1,0 +1,31 @@
+<app-nav-bar></app-nav-bar>
+<h1>The Blog</h1>
+<h2>LATEST NEWS</h2>
+
+<div class="blogs_list_wrapper" *ngFor="let blog of blogs">
+
+  <!-- From api -->
+  <div class="single_blog_card">
+    <div class="blog_graphics">
+    </div>
+    <div class="blog_title">
+      <h3>{{blog.title}}</h3>
+    </div>
+    <div class="bloger_rele_date">
+      <span>18 June 2018 / <span class="bloger_type">{{blog.author}}</span></span>
+    </div>
+    <div class="blog_snippest">
+      <p>
+        {{blog.body}}
+      </p>
+    </div>
+
+    <!-- <div class="blog_read_more_button">
+            <button>Read More</button>
+        </div> -->
+    <div class="blog_hidden_card_with_blog_content">
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,223 @@
+.main_modal 
+{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f7;
+}
+.modal_card 
+{
+    position: relative;
+    width: 80%;
+    height: 70%;
+    background-color: #E9E9E9;
+    border: 2px solid #E9E9E9;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.modal_card 
+{
+    padding: 60px;
+}
+.main_description 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.modal_graphics 
+{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.modal_graphics img 
+{
+    width: 400px;
+    height: auto;
+    margin-bottom: -5px;
+    border-radius: 10px;
+}
+.modal_detail 
+{
+    width: 57%;
+}
+.detail_name 
+{
+    padding: 20px;
+    margin-right: auto;
+}
+.detail_name h1 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+}
+.detail_price_point 
+{
+    padding: 20px;
+}
+.detail_price_point h2 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+}
+.detail_price_point h2 .prev_price 
+{
+    color: #F87474;
+    text-decoration: line-through;
+    padding-left: 40px;
+}
+.detail_product_amount 
+{
+    padding: 100px 15px;
+}
+.detail_product_amount li 
+{
+    list-style-type: none;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+}
+.detail_product_amount li  .loose_item, .add_item 
+{
+    padding: 5px 50px;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 300ms ease-in;
+}
+.detail_product_amount li  .loose_item:hover, .add_item:hover
+{
+    color: #36AE7C;
+}
+.detail_product_amount li  value_cout 
+{
+    padding: 20px 40px;
+} 
+.detail_execution 
+{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.exe_do_now button 
+{
+   width: 150px;
+    padding: 15px;
+    background: #36AE7C;
+    color: #363b41;
+    border: 2px solid #36AE7C;
+    border-radius: 1px;
+    font-family: Bai_Jamjuree;
+    font-size: 15px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.exe_do_now button:hover 
+{
+    box-shadow: none;
+}
+.exe_later button 
+{
+    width: 150px;
+    padding: 15px;
+    background: #E9E9E9;
+    color: #36AE7C;
+    border: 2px solid #36AE7C;
+    border-radius: 1px;
+    font-family: Bai_Jamjuree;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+}
+.exe_later button:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.modal_text_description 
+{
+    padding: 40px;
+}
+.min_nav 
+{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.min_nav li 
+{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 2px solid #9b9b9b;
+    width: 45%;
+    text-align: center;
+    transition: 300ms ease-in-out;
+}
+.min_nav  li a 
+{
+    text-decoration: none;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+    color: #1a2639;
+    font-size: 14px;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.min_nav li:hover a 
+{
+    color: #36AE7C;
+}
+.min_nav li:hover
+{
+    border-bottom: 2px solid #36AE7C;
+}
+.text_des_data 
+{
+    padding: 20px;
+}
+.text_des_data  p 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 13px;
+    display: none;
+}
+#show_info 
+{
+    display: inline;
+}
+.min_nav .show_info_class 
+{
+    border-bottom: 2px solid #36AE7C;
+}
+.min_nav .show_info_class a 
+{
+    color: #36AE7C;
+}
+.close_this_shit 
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: right;
+}
+.close_this_shit span 
+{
+    font-size: 50px;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-weight: bold;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.close_this_shit span:hover 
+{
+    transform: rotate(135deg);
+    color: #36AE7C;
+}

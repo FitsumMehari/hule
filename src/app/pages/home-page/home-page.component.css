@@ -1,0 +1,65 @@
+.body_wrapper h1 
+{
+    color: #36AE7C;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E9E9E9;
+    font-family: Bai_Jamjuree;
+    width: 250px;
+}
+.card_wrapper 
+{
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.card 
+{
+    padding: 20px;
+    border: 2px solid #E9E9E9;
+    background: #E9E9E9;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 300px;
+    border-radius: 6px;
+    text-align: center;
+    height: 350px;
+    transition: 500ms ease-in-out;
+}
+.card h2 
+{
+    padding: 20px;
+    color: #36AE7C;
+    border-bottom: 2px solid rgba(21, 21, 30, 0.658);
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Bai_Jamjuree;
+    transition: 500ms ease-in-out;
+}
+.card:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card:hover h2 
+{
+    color: #36AE7C;
+    border-color: #36AE7C;
+}
+.card_icon i 
+{
+    font-size: 90px;
+    padding: 30px;
+    color: #36AE7C;
+}
+.card_content li 
+{
+    text-align: center;
+    color: #1a2639;
+    list-style: none;
+    padding: 0px 10px 3px 30px;
+    font-family: Bai_Jamjuree;
+}

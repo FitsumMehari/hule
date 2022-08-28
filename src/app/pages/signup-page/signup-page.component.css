@@ -1,0 +1,266 @@
+.main_signuup_wrapper 
+{
+    background-color: #f3f4f7;
+    height: 900px;
+}
+.intro_new_user 
+{
+    padding: 20px;
+    padding-top: 50px;
+    text-align: center;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+}
+.intro_new_user .bold_this 
+{
+    color: #36AE7C;
+}
+.sign_up_break_the_ice 
+{
+    padding: 40px;
+    text-align: center;
+}
+.give_hand 
+{
+    /* border: 1px solid green; */
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150px;
+    color: #f0b931;
+    transform: rotateZ(30deg);
+    animation: wave 1s ease-in-out 1s infinite alternate;
+    /* transition: 250ms ease-in-out; */
+}
+@keyframes wave {
+    from {transform: rotateZ(30deg);}
+    to {transform: rotateZ(-30deg);}
+    
+}
+/* .give_hand:hover 
+{
+    animation-name: wave;
+    animation-duration: 5s;
+    
+} */
+
+.introduce_your_selfe 
+{
+    padding: 20px;
+}
+.introduce_your_selfe  h1 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 17px;
+}
+.introduce_your_selfe p 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 14px;
+    padding: 10px;
+}
+.enough_this_shit 
+{
+    padding: 50px;
+}
+.enough_this_shit button
+{
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 2px;
+    color: #1a2639;
+    border: 1px solid #36AE7C;
+    background: #36AE7C;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.enough_this_shit button:hover 
+{
+    background: #2a8660;
+    border-color: #2a8660;
+    color: #1a2639;
+}
+.content_user_name, .content_phone_number, .content_email, .content_password, .content_wrapper 
+{
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+}
+.show_cont 
+{
+    display: block;
+    padding: 30px;
+    opacity: 1;
+    transition: 300ms ease-in-out;
+}
+.content_user_name, .content_phone_number, .content_email, .content_password
+{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content_user_name input, .content_phone_number input, .content_email input, .content_password input
+{
+    width: 300px;
+    padding: 15px;
+    padding-top: 16px;
+    margin-bottom: 5px;
+    border: 1px solid #E9E9E9;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #E9E9E9;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: 200ms ease-in-out;
+}
+.content_user_name .boxWarrning, .content_phone_number .boxWarrning, .content_email .boxWarrning, .content_password .boxWarrning
+{
+    width: 300px;
+    padding: 15px;
+    padding-top: 16px;
+    margin-bottom: 5px; 
+    border: none;
+    border-right: 3px solid #E9E9E9;
+    border-left: 3px solid #E9E9E9;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #E9E9E9;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    outline: none;
+    animation: boxBlink 900ms ease-in-out 900ms infinite alternate;
+    transition: 200ms ease-in-out;
+}
+@keyframes boxBlink {
+    from {border-color: #E9E9E9;}
+    to {border-color: #f34b64;}  
+}
+.terms 
+{
+    padding: 40px;
+}
+.terms p 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 14px;
+}
+.terms a 
+{
+    color: #41c990;
+    font-family: Bai_Jamjuree;
+    font-size: 14px;
+    text-decoration: none;
+    text-decoration: underline;
+}
+h2 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 18px;
+    padding: 5px;
+    text-align: left;
+}
+.note 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    font-size: 13px;
+    padding-bottom: 50px;
+    text-align: left;
+}
+.pass_check 
+{
+    width: 300px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+.pass_check li 
+{
+    list-style: none;
+    font-family: Bai_Jamjuree;
+}
+.check_mark 
+{
+    padding-left: 50px;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.pass_check .check_mark_bad 
+{
+    padding-left: 50px;
+    text-align: right;
+    color: #f3558e;
+}
+.pass_check .check_mark_good 
+{
+    padding-left: 50px;
+    text-align: right;
+    color: #17b978;
+}
+.terms input
+{
+    width: 15px;
+    height: 15px;
+    box-shadow: none;
+    accent-color: #36AE7C;
+    cursor: pointer;
+}
+.config_button a 
+{
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 2px;
+    color: #1a2639;
+    border: 1px solid #36AE7C;
+    background: #36AE7C;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.config_button a:hover 
+{
+    background: #2a8660;
+    border-color: #2a8660;
+    color: #1a2639;
+}
+
+
+.fillWarrning_show 
+{
+    font-size: 25px;
+    padding: 10px;
+    color: #f3558e;
+    /* opacity: 0; */
+    animation: blink 900ms ease-in-out 900ms infinite alternate;
+}
+@keyframes blink {
+    from {opacity: 0;}
+    to {opacity: 1;}  
+}
+.fillWarrning 
+{
+    font-size: 25px;
+    padding: 10px;
+    color: #f3558e;
+    opacity: 0;
+}

@@ -1,0 +1,120 @@
+<div class="stuff">
+    <app-admin-nav></app-admin-nav>
+    <div class="dashboard_wrapper">
+        <div class="side_nav">
+            <app-admin-side-nav></app-admin-side-nav>
+        </div>
+    
+        <div class="dash_content"> 
+            <div class="info_wrapper">
+
+               <div class="{{ showBigMenu ? 'command_list' : 'command_list_hide' }}">
+                <div class="add_product">
+                    <button (click)="isProcessProductHidden = false; isPackageProcessHidden = true; showBigMenu = false" >New Product</button>
+                </div>
+                <div class="add_Package">
+                    <button (click)="isPackageProcessHidden = false; isProcessProductHidden = true; showBigMenu = false" >New Package</button>
+                </div>
+                
+               </div>
+
+            </div>    
+    
+
+            <div class="{{isProcessProductHidden ? 'product_processsor_hide' : 'product_processsor'}}">
+                <div class="close_modal">
+                    <i (click)="isProcessProductHidden = true; showBigMenu = true" class="fa-solid fa-square-xmark"></i>
+                </div>
+                <div class="processor_header">
+                    <h1>Add New Suff</h1>
+                    <li>This is a single product like some kind of cake of wine just a single product.</li>
+                </div>
+                <div class="fill_form">
+                    <form action="#">
+                        <div class="process_input_wrappers">
+                            <input type="text" name="ProductName" id="Productname" placeholder="Product Name" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <input type="text" name="ProductPrice" id="ProductPrice" placeholder="Product Price" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <label for="PicField">Choose Product Picture</label><br>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="PicField" id="PicField" placeholder="Load Product Image" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <select name="Product_cata" id="cata">
+                                <option value="AA">AA</option>
+                                <option value="BB">BB</option>
+                                <option value="CC">CC</option>
+                                <option value="DD">DD</option>
+
+                            </select>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <textarea name="product_description" id="product_disc" cols="30" rows="10" placeholder="Product Description"></textarea>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <textarea name="product_warnning" id="product_war" cols="30" rows="10" placeholder="Product Warnning"></textarea>
+                        </div>
+
+                        <div class="submit_button_wrapper">
+                            <button type="submit">Add this Guy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+ 
+
+
+            <div class="{{isPackageProcessHidden ? 'package_processsor_hide' : 'package_processsor'}}">
+                <div class="close_modal">
+                    <i (click)="isPackageProcessHidden = true; showBigMenu = true" class="fa-solid fa-square-xmark"></i>
+                </div>
+                <div class="package_header">
+                    <h1>Add New Package</h1>
+                    <li>Package may contain many element inside just like it name it is a Package.</li>
+                    <li>Use Package content input to fill the package.</li>
+                </div>
+                <div class="fill_form">
+                    <form action="#">
+                        <div class="process_input_wrappers">
+                            <input type="text" name="ProductName" id="Productname" placeholder="Package Name" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <input type="text" name="ProductPrice" id="ProductPrice" placeholder="Package Price" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <label for="PicField">Choose Product Picture</label><br>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="PicField" id="PicField" placeholder="Load Product Image" required>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <input  [(ngModel)]="Content" type="text" name="package_content" id="package_content" placeholder="Package Content" autocomplete="off" required>
+                            <div class="package_list_adder_button_wrapper">
+                                <button (click)="addToMiniList(Content); Content = ''" class="push_content">Add this</button>
+                            </div>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <div *ngFor="let item of PackgeContent; let currentIndex = index" class="display_list">
+                                <li><span class="Icon_counter"><i class="fa-solid fa-square-check"></i></span> {{item}}</li>
+                            </div>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <textarea name="product_description" id="product_disc" cols="30" rows="10" placeholder="Package Description"></textarea>
+                        </div>
+                        <div class="process_input_wrappers">
+                            <textarea name="product_warnning" id="product_war" cols="30" rows="10" placeholder="Package Warnning"></textarea>
+                        </div>
+
+                        <div class="submit_button_wrapper">
+                            <button type="submit">Add this package</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>

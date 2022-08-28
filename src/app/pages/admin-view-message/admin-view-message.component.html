@@ -1,0 +1,66 @@
+<div class="stuff">
+    <app-admin-nav></app-admin-nav>
+    <div class="dashboard_wrapper">
+        <div class="side_nav">
+            <app-admin-side-nav></app-admin-side-nav>
+        </div>
+    
+        <div class="dash_content">
+            
+                <!-- msg Box --> <br><br>
+                <div class="{{showHotMsg ? 'msg_box_wrapper' : 'msg_box_wrapper_hide'}}">
+                    <div class="msg_by">
+                        <li>Send by: <span class="client_name">Some Guy</span> </li>
+                    </div>
+                    <div class="msg_date">
+                        <li>Date: <span class="msg_sent_date">Jun 1, 2001</span></li>
+                    </div>
+                    <div class="msg_body">
+                        <h1>Message</h1>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero.</p>
+                    </div>
+                    <div class="close_modal">
+                        <span (click)="showHotMsg = false" class="close_text">Close</span> 
+                    </div>
+                </div>
+
+
+            <div class="info_wrapper">
+
+               <div class="message_tabel_wrapper">
+                <div class="new_msg_alert">
+                    <h1>Those are your messages</h1>
+                    <li>This messages are sent by clients this can be a question or help or info or it might be your are going great stuff.</li>
+                </div>
+                <table>
+                    <tr>
+                      <th>No</th>
+                      <th>Date <span class="table_head_icon"><i class="fa-solid fa-calendar"></i></span> </th>
+                      <th>Sender Name <span class="table_head_icon"><i class="fa-solid fa-user"></i></span> </th>
+                      <th>Action <span class="table_head_icon"><i class="fa-solid fa-square-check"></i></span> </th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Jan 24, 2014</td>
+                      <td>Eyob Some</td>
+                      <td><span (click)="showHotMsg = true" class="proc">Read</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jun 2, 2014</td>
+                        <td>Dash bath</td>
+                        <td><span (click)="showHotMsg = true" class="proc">Read</span></td>
+                    </tr>
+                  </table>
+
+               </div>
+               
+               
+            </div>   
+            
+
+
+
+        </div>
+    </div>
+    </div>

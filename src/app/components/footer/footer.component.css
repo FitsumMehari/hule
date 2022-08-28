@@ -1,0 +1,77 @@
+.foot_wrapper 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #E9E9E9;
+    border-bottom: 5px solid #36AE7C;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+h1 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.categ_list li, .help_center li
+{
+    list-style: none;
+    padding: 5px;
+    padding-left: 50px;
+}
+.categ_list li a, .help_center li a
+{
+    text-decoration: none;
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    transition: 300ms ease-in-out;
+}
+.categ_list li a:hover, .help_center li a:hover
+{
+    color: #36AE7C;
+}
+
+.get_in_touch p 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    transition: 300ms ease-in-out;
+}
+.get_in_touch p:hover 
+{
+    color: #36AE7C;
+}
+.get_in_touch li  
+{
+    list-style: none;
+}
+.connect_method 
+{
+    display: flex;
+}
+.connect_method li  i 
+{
+    padding: 20px 15px 0px 0px;
+    color: #1a2639;
+    font-size: 18px;
+    transition: 300ms;
+}
+.connect_method li  i:hover 
+{
+    color: #36AE7C;
+}
+.copy_right_stuff 
+{
+    padding: 30px;
+}
+.copy_right_stuff  p 
+{
+    color: #1a2639;
+    font-family: Bai_Jamjuree;
+    text-align: center;
+}

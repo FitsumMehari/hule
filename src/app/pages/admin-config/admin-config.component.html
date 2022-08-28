@@ -1,0 +1,48 @@
+<div class="stuff">
+    <app-admin-nav></app-admin-nav>
+    <div class="dashboard_wrapper">
+        <div class="side_nav">
+            <app-admin-side-nav></app-admin-side-nav>
+        </div>
+    
+        <div class="dash_content"> 
+            <div class="info_wrapper">
+
+               <div class="config_card_wrapper">
+               
+                <div class="config_user_icon">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+
+                <div class="config_header">
+                    <h1>Edit Your Name And Password</h1>
+                </div>
+
+                <div class="config_user">
+                    <h2>Your Current Info</h2>
+                    <li>Name: <span class="admin_info">Some Admin</span> </li>
+                    <li>Password: <span class="admin_info">********</span> </li>
+                </div>
+                <div class="new_era">
+                    <form action="post">
+                        <div class="new_input">
+                            <input type="text" name="newName" id="newName" autocomplete="off" placeholder="New Name" required>
+                        </div>
+                        <div class="new_input">
+                            <input type="password" name="oldPassword" id="oldPassword" autocomplete="off" placeholder="Previous Password" required>
+                        </div>
+                        <div class="new_input">
+                            <input type="password" name="newpassword" id="newpassword" autocomplete="off" placeholder="New Password" required>
+                        </div>
+                        <div class="new_suff_submit">
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+               </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>

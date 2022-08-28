@@ -1,0 +1,27 @@
+<div class="master_login_Page_wrapper">
+    <div class="form_wrapper">
+        <form #LogInfo="ngForm" class="fm" (ngSubmit)="LogInUser(LogInfo)"  method="get">
+            <div class="{{ API_LOGIN_ERROR === ''? 'error_msg_hide' : 'error_msg' }}">
+                <p> <span class="err_sign"><i class="fa-solid fa-circle-exclamation"></i></span> {{API_LOGIN_ERROR}} </p>
+            </div>
+            <div class="user_name_wrapper">
+                <span class="icons"><i class="fa-solid fa-user"></i></span>
+                <input class="{{isUserNameProvided ? '' : 'boxWarrning'}}" type="email" name="username" id="user_name" autocomplete="off" placeholder="Email" required ngModel><span class="{{isUserNameProvided ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            </div>
+            <div class="user_password_wrapper">
+                <span class="icons"><i class="fa-solid fa-lock"></i></span>
+                <input class="{{isPasswordProvided ? '' : 'boxWarrning'}}" type="password" name="password" id="user_key" autocomplete="off" placeholder="Password" required ngModel><span class="{{isPasswordProvided ? 'fillWarrning' : 'fillWarrning_show'}}"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            </div>
+            <div class="button_wrapper">
+                <button type="submit">Sign in</button>
+            </div>
+            <div class="prep_for_signup">
+                <span class="info">Not a member? </span><a routerLink="/signup">Sign up now</a>
+
+                <br><br>
+                <a  class="info" routerLink="/home">I'm here for the demo!</a>
+
+            </div>
+        </form>
+    </div>
+</div>

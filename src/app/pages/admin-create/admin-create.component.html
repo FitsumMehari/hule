@@ -1,0 +1,83 @@
+<div class="stuff">
+    <app-admin-nav></app-admin-nav>
+    <div class="dashboard_wrapper">
+        <div class="side_nav">
+            <app-admin-side-nav></app-admin-side-nav>
+        </div>
+    
+        <div class="dash_content"> 
+            <div class="info_wrapper">
+
+               <div class="{{ showBigMenu ? 'command_list' : 'command_list_hide' }}">
+                <div class="create_blog">
+                    <button (click)="showCreateBlogDialog = true; showFAQsDialog = false; showBigMenu = false;" >Create Blog</button>
+                </div>
+                <div class="add_faqs">
+                    <button (click)="showFAQsDialog = true; showCreateBlogDialog = false; showBigMenu = false;">Create FAQs</button>
+                </div>
+                
+               </div>
+
+            </div>    
+
+
+
+
+            <!-- BLog Struct -->
+            <div class=" {{showCreateBlogDialog ? 'blog_process_wrapper' : 'blog_process_wrapper_hide'}} ">
+                <div class="close_modal">
+                    <i (click)="showCreateBlogDialog = false; showBigMenu = true" class="fa-solid fa-square-xmark"></i>
+                </div>
+                <div class="header_blog_process">
+                    <h1>Create Blog, News For The Reader</h1>
+                    <li>This is a good opportunity to tell your customer what is the current market look like.</li>
+                </div>
+                <div class="blog_brocess_field">
+                    <form action="post">
+                        <div class="blog_input">
+                            <input type="text" name="blog_tit" id="blog_tit" placeholder="Your Blog Title" autocomplete="off" required>
+                        </div>
+                        <div class="blog_input">
+                            <input type="file" accept=".png, .jpg, .jpeg" name="blog_BG" id="blog_BG" placeholder="Your Blog Cover" autocomplete="off" required>
+                        </div>
+                        <div class="blog_input">
+                            <textarea name="Blog_content" id="Blog_content" cols="30" rows="10" autocomplete="off" placeholder="Yout Blog Body" required></textarea>
+                        </div>
+
+                        <div class="blog_submit">
+                            <button type="submit">Add This One</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <!-- faqs -->
+            <div class="{{showFAQsDialog ? 'possible_faqs_wrapper' : 'possible_faqs_wrapper_hide'}}">
+                <div class="close_modal">
+                    <i (click)="showFAQsDialog = false; showBigMenu = true" class="fa-solid fa-square-xmark"></i>
+                </div>
+                <div class="faqs_header">
+                    <h1>Create Possible Client Questions</h1>
+                    <li>The goal here is to create simple dialog between admin and client.</li>
+                </div>
+                <div class="faqs_fields">
+                    <form action="post">
+                        <div class="faqs_input">
+                            <input type="text" name="Questions" id="Questions" placeholder="Client Question?" autocomplete="off" required>
+                        </div>
+                        <div class="faqs_input">
+                            <textarea name="Questions" id="Questions" cols="70" rows="7"  placeholder="Administration Answer" autocomplete="off" required></textarea>
+                        </div>
+                        <div class="faqs_submit">
+                            <button type="submit">Add This one</button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+
+
+        </div>
+    </div>
+    </div>

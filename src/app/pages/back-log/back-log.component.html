@@ -1,0 +1,93 @@
+<div class="mainWrapper">
+    
+    <div class="command_header">
+        <h2>Aveil Command For Now</h2>
+    </div>
+    <div class="command_tab">
+        <div class="command_"
+        (click)="showForm()" >
+            <a href="#">Add New Product</a>
+        </div>
+        <div class="command_" (click)="showForm()">
+            <a href="#">Make a Blog</a>
+        </div>
+    </div>
+
+
+<div class="main_product_enty_wrapper">
+    
+<!-- Product entry -->
+<div class="main_product_entry_wrapper" [ngClass]="{'Frame_Show' : DisplayForm == true}">
+    <form method="get">
+        <div class="header_wrapper">
+            <h1>New Product And Shit</h1>
+        </div>
+        <div class="form_content_wrapper">
+            <div class="entry">
+                <input type="text" name="product_name" placeholder="Product Name" autocomplete="off">
+            </div>
+            <div class="entry">
+                <input type="text" name="price_tag" placeholder="Price Tag" autocomplete="off">
+            </div>
+            <div class="entry">
+               <select name="cata" id="cata">
+                <option value="#">Catagories</option>
+                <option value="A">Aasdasdas</option>
+                <option value="B">Bqweqweq</option>
+                <option value="C">Cewrwerwerwer</option>
+                <option value="D">Dasdfgdfg</option>
+               </select>
+            </div>
+            <div class="entry">
+                <textarea name="warranety"cols="30" rows="10" placeholder="Product warrenty"></textarea>
+            </div>
+            <div class="entry">
+                <textarea name="description"  cols="30" rows="10" placeholder="product discription"></textarea>
+            </div>
+            <div class="load_image_wrap">
+                <button>Load Image</button>
+            </div>
+            <div class="send_wrap">
+                <button type="submit">Add</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<div class="new_cata_wrapper" [ngClass]="{'Frame_Show' : DisplayForm == true}">
+    <form method="get">
+        <div class="new_cata_input">
+            <input type="text" name="new_catagories" id="new_catagories" placeholder="Create New Catagories" autocomplete="off">
+        </div>
+        <div class="cata_add_button_warpper">
+            <button>ADD THIS ONE</button>
+        </div>
+    </form>
+</div>
+
+<div class="blog_wrapper" [ngClass]="{'Frame_Show' : DisplayForm == false}">
+    <div class="blog_inner_wrapper">
+        <div class="blogger_head">
+            <div class="blog_header_wrapper">
+                <h1>Create Blog</h1>
+            </div>
+        </div>
+        <form class="blog_form" action="#" method="get">
+            <div class="blog_title">
+                <input type="text" name="blog_title" id="blog_title" placeholder="Blog Title" autocomplete="off">
+            </div>
+            <div class="blog_image_loader">
+                <input type="file" name="blog_title" id="blog_title" placeholder="Blog Title" autocomplete="off">
+            </div>
+            <div class="blog_message">
+                <textarea name="blog_message" id="glog_message" cols="30" rows="10" placeholder="Your actual blog"></textarea>
+            </div>
+            <div class="make_blog">
+                <button type="submit">Make Blog</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>

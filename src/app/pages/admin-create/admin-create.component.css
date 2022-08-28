@@ -1,0 +1,208 @@
+/* font-family: Bai_Jamjuree; */
+.stuff 
+{
+    background-color: #f3f4f7;
+}
+.dashboard_wrapper 
+{
+    display: flex;
+}
+.side_nav 
+{
+    width: 100px;
+}
+.info_wrapper 
+{
+    padding: 20px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+}
+.dash_content 
+{
+    height: 841px;
+}
+.command_list
+{
+    margin-left: auto;
+    margin-right: auto;
+    height: 810px;
+}
+.command_list_hide 
+{
+    display: none;
+}
+.create_blog 
+{
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+.create_blog button 
+{
+    width: 250px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+    border: 1px solid #1a2639;
+    background: #1a2639;
+    border-radius: 3px;
+    color: #f3f4f7;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.create_blog button:hover  
+{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.add_faqs 
+{
+    width: 500px;
+    padding: 20px;
+    text-align: center;   
+}
+.add_faqs button 
+{
+    width: 250px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: Bai_Jamjuree;
+    font-size: 20px;
+    border: 1px solid #1a2639;
+    background: #1a2639;
+    border-radius: 3px;
+    color: #f0f0f0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.add_faqs button:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.close_modal 
+{
+    text-align: right;
+}
+.close_modal i 
+{
+    font-size: 30px;
+    color: #333333;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.close_modal i:hover 
+{
+    color: #EF4056;
+}
+.blog_process_wrapper 
+{
+    border: 1px solid #E9E9E9;
+    background: #E9E9E9;
+    padding: 20px;
+    width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 500ms ease-in-out;
+}
+.blog_process_wrapper_hide 
+{
+    display: none;
+}
+.header_blog_process, .faqs_header  
+{
+    padding: 20px;
+    text-align: center;
+}
+.header_blog_process h1, .faqs_header h1  
+{
+    font-size: 30px;
+    color: #333333;
+    font-family: Bai_Jamjuree;
+}
+.header_blog_process li, .faqs_header li 
+{
+    list-style: none;
+    font-family: Bai_Jamjuree;
+    color: #1a2639;
+    font-size: 14px;
+}
+.blog_input input, .blog_input textarea, .faqs_input input, .faqs_input textarea  
+{
+    width: 800px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #1a2639;
+    background: #1a2639;
+    color: #E9E9E9;
+    font-family: Bai_Jamjuree;
+    outline: none;
+}
+.blog_input input:hover, .blog_input textarea:hover 
+{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline-color: #1a2639;
+} 
+.blog_input textarea, .faqs_input textarea   
+{
+    width: 800px;
+    min-width: 800px;
+    max-width: 800px;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+}
+.blog_brocess_field 
+{
+    text-align: center;
+}
+.blog_submit, .faqs_submit  
+{
+    padding: 20px;
+}
+.blog_submit button, .faqs_submit button 
+{
+    width: 250px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: Bai_Jamjuree;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid #1a2639;
+    background: #1a2639;
+    border: 2px;
+    color: #f3f4f7;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 300ms ease-in-out;
+}
+.blog_submit button:hover, .faqs_submit button:hover
+{
+    transform: scale(1.1);
+}
+.possible_faqs_wrapper 
+{
+    border: 1px solid #E9E9E9;
+    background: #E9E9E9;
+    padding: 20px;
+    width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 500ms ease-in-out;
+}
+.possible_faqs_wrapper:hover, .blog_process_wrapper:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.possible_faqs_wrapper_hide 
+{
+    display: none;
+}

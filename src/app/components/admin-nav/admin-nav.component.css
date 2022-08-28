@@ -1,0 +1,70 @@
+.top_nav 
+{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.fix_width 
+{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.styleish 
+{
+    padding: 10px;
+    font-size: 30px;
+    color: #222222;
+}
+.first_content 
+{
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+.page_name h1 
+{
+    color: #222222;
+    font-size: 25px;
+    padding: 10px 0px 10px 10px;
+    font-family: Bai_Jamjuree;
+}
+.page_icon 
+{
+    color: #caccd1;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+.page_icon:hover 
+{
+    color: #222222;
+}
+.admin_info 
+{
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+.admin_name 
+{
+    color: #222222;
+    font-size: 14px;
+    font-family: Bai_Jamjuree;
+    padding: 10px;
+}
+.admin_logo 
+{
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: #0abf53;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}

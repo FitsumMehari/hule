@@ -18,7 +18,7 @@
     <div class="product_price">
         <li>${{ data.ProductSinglePrice }}</li>
     </div>
-    <div class="product_quantity">
+    <div class="product_quantity" *ngIf="!addressIsSet">
         <li><span (click)="looseProduct(counter)" class="loose_pro"> - </span> {{data.ProductQuantity}} <span (click)="addProduct(counter)" class="add_pro"> + </span></li>
     </div>
     <div class="total_product_proce">
@@ -64,7 +64,7 @@
             <textarea ngModel name="noteToDeliver" id="Note" cols="30" rows="10" placeholder="If you have any special note.."></textarea>
         </div>
         <div class="submit_reciver_info">
-            <button type="submit">This is The Receiver </button>
+            <button type="submit">Confirm Order </button>
         </div>
     </form>
 </div>
@@ -77,7 +77,7 @@
         <li>Sub-Total ${{ getTotalPrice() }}</li>
     </div>
     <div class="product_checkout">
-        <button *ngIf="addressIsSet">Check Out</button>
+        <button *ngIf="addressIsSet" (click)="getOrderFinalPrice(orderId)">Check Out</button>
     </div>
 </div>
 <app-footer></app-footer>

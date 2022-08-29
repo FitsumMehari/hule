@@ -10,6 +10,7 @@ import { FillCartService } from 'src/app/fill-cart.service';
 export class CartPageComponent implements OnInit {
 
   private isCartEmpty: boolean = true;
+  public orderId: string = ""
   public ProductList: Array<any> = []
   private SubTotalPrice: any;
 
@@ -64,18 +65,15 @@ export class CartPageComponent implements OnInit {
   order(orderData: any) {
     console.log(orderData);
 
-    const userId = "Sample ID"
-    const products = [
-      {
-        productId: "Sample Product ID",
-        quantity: 10
-      },
-      {
-        productId: "Sample Product ID",
-        quantity: 10
-      }
-    ]
-    const amount = 2323.23
+    const userId = this.appService.getUserId();
+    let products: any = []
+    this.ProductList.forEach((product) => {
+      products.push({
+        productId: product.productId,
+        quantity: product.ProductQuantity,
+      })
+    })
+    const amount = this.getTotalPrice();
     const address = {
       firstName: orderData.RFname,
       lastName: orderData.RFFname,
@@ -95,7 +93,9 @@ export class CartPageComponent implements OnInit {
     }
 
     this.appService.createOrder(order).subscribe((res: any) => {
+
       if (res.message === "success") {
+        this.orderId = res._id
         this.addressIsSet = true;
       } else {
         this.addressIsSet = false;
@@ -105,6 +105,14 @@ export class CartPageComponent implements OnInit {
 
   }
 
+
+  getOrderFinalPrice(orderId: string) {
+
+    this.appService.getOrderFinalPrice(orderId).subscribe((order) => {
+      console.log(order);
+
+    });
+  }
 
 
 }

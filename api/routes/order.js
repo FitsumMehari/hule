@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require('./verifyToken')
 
 const Order = require('../models/Order');
+const Product = require('../models/Product');
 
 //CREATE NEW ORDER
 router.post('/create', verifyToken, async (req, res) => {
@@ -15,7 +16,7 @@ router.post('/create', verifyToken, async (req, res) => {
 
       const newOrder = new Order(req.body);
       const savedOrder = await newOrder.save();
-      res.status(200).json({"message": "success", ...savedOrder._doc});
+      res.status(200).json({ "message": "success", ...savedOrder._doc });
     } catch (error) {
       res.status(500).json(error);
     }
@@ -56,6 +57,29 @@ router.get('/getorder/:userId', verifyTokenAndAuthorization, async (req, res) =>
       userId: req.params.userId
     });
     res.status(200).json(userOrder);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+//GET ORDER PRICE
+router.post('/getFinalPrice', verifyToken, async (req, res) => {
+  try {
+    var price = 0;
+    var calcIsDone = false;
+    const order = await Order.findById(req.body.orderId);
+
+    try {
+      order.products.forEach(async (product) => {
+        const orderProduct = await Product.findById(product.productId);
+        price += (orderProduct.ItemPrice * product.quantity);
+        if ((order.products.length - order.products.indexOf(product)) === 1) {
+          return res.status(200).json(price);
+        }
+      })
+    } catch (error) {
+      res.status(500).json(error);
+    }
   } catch (error) {
     res.status(500).json(error);
   }

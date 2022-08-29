@@ -33,6 +33,7 @@ export class LoginPageComponent implements OnInit {
        {
         // console.log(res);
         localStorage.setItem('Token', res.accessToken);
+        localStorage.setItem('UserId', res._id)
         AuthInterceptor.accessToken = res.accessToken;
         this.router.navigate(['/home']);
        }, (err) => {

@@ -29,6 +29,7 @@ export class StorePageComponent implements OnInit {
   }
 
   public wrapData(index: number): void {
+    this._storeInteraction.sendItemId(this.Products[index]._id)
     this._storeInteraction.sendItemName(this.Products[index].ItemName);
     this._storeInteraction.sendItemPrice(this.Products[index].ItemPrice);
     this._storeInteraction.sendItemIimageLoc(this.Products[index].ItemImageLoc);

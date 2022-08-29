@@ -22,6 +22,10 @@ export class AppService {
     return this.http.post(`${this.API_URL}/api/auth/login`, log_data.value);
   }
 
+  getUserId() {
+    return localStorage.getItem("UserId");
+  }
+
   getUserStatus_APICALL() {
     return this.http.get(`${this.API_URL}/api/user/stats`);
   }
@@ -49,5 +53,15 @@ export class AppService {
 
     return this.http.post(`${this.API_URL}/api/order/create`, orderData, httpOptions)
 
+  }
+
+  getOrderFinalPrice(orderId: string) {
+    var headers_object = new HttpHeaders().set('token', `Bearer ${localStorage.getItem("Token")}`);
+
+    const httpOptions = {
+      headers: headers_object
+    };
+
+    return this.http.post(`${this.API_URL}/api/order/getFinalPrice`, {orderId}, httpOptions)
   }
 }

@@ -16,11 +16,12 @@ export class ModalComponent implements OnInit {
   public SelectedItemName: string = "";
   public SelectedItemPrice: number = 0;
   public SelectedItemImage: string = "";
+  public SelectedItemId: string = "";
 
   constructor(private _storeInteraction: StoreItemInteractionService, private _CardInsta: FillCartService, private router: Router) { }
 
   ngOnInit(): void {
-    this._storeInteraction.ItemName$.subscribe((_name) => { 
+    this._storeInteraction.ItemName$.subscribe((_name) => {
       this.SelectedItemName = _name;
     });
 
@@ -32,26 +33,31 @@ export class ModalComponent implements OnInit {
     this._storeInteraction.ItemImageLoc$.subscribe(_imageLoc => {
       this.SelectedItemImage = _imageLoc;
     });
-   
+
+    this._storeInteraction.ItemIdSource$.subscribe(_id => {
+      this.SelectedItemId = _id;
+    })
+
   }
 
 
-  addToCart() 
+  addToCart()
   {
     this._CardInsta.sendItemName(this.SelectedItemName);
     this._CardInsta.sendItemPrice(this.SelectedItemPrice);
     this._CardInsta.sendItemQuantity(this.number_of_product);
     this._CardInsta.sendItemIimageLoc(this.SelectedItemImage);
+    this._CardInsta.sendItemId(this.SelectedItemId);
     this._CardInsta.updateCart();
     this.router.navigate(['/store']);
   }
 
-  openDescription(): void 
+  openDescription(): void
   {
     this.mInfoShow[0] = true;
     this.mInfoShow[1] = false;
   }
-  openWarranty(): void 
+  openWarranty(): void
   {
     this.mInfoShow[0] = false;
     this.mInfoShow[1] = true;
@@ -65,7 +71,7 @@ export class ModalComponent implements OnInit {
   I_takAnotherOne() { this.number_of_product++; }
   I_hadToomuch() {if(this.number_of_product > 1) this.number_of_product--;}
 
- 
+
 
 
 }
